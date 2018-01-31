@@ -289,7 +289,7 @@ class Recorder(SpanRecorder):
         except Exception as e:
             self._fine(
                     "Caught exception during report: {0}, stack trace: {1}",
-                    (e, traceback.format_exc(e)))
+                    (e, traceback.format_exc()))
             self._restore_spans(report_request.span_records)
             return False
 
